@@ -1,0 +1,33 @@
+<resources>
+    <!-- Huisstijl gotyoursix.nl -->
+    <color name="accent">#F39200</color>
+    <color name="accent_dark">#D97E00</color>
+    <color name="accent_soft">#FFF4E3</color>
+
+    <color name="bg">#FFFFFF</color>
+    <color name="bg_alt">#F6F7F9</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="line">#E7E9EE</color>
+    <color name="ink">#2B2B2B</color>
+    <color name="ink_soft">#4A4A4A</color>
+    <color name="muted">#6B7280</color>
+    <color name="on_accent">#FFFFFF</color>
+
+    <color name="ok">#1F9D55</color>
+    <color name="ok_soft">#E6F6EC</color>
+    <color name="danger">#DC2626</color>
+    <color name="danger_soft">#FDECEC</color>
+    <color name="info">#4F6BED</color>
+    <color name="neutral_soft">#EEF0F3</color>
+
+    <!-- Belscherm: altijd donker antraciet -->
+    <color name="call_bg">#262626</color>
+    <color name="call_surface">#333333</color>
+    <color name="call_button">#3D3D3D</color>
+    <color name="call_text">#FFFFFF</color>
+    <color name="call_text_dim">#B9BCC4</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="launcher_bg">#F39200</color>
+</resources>

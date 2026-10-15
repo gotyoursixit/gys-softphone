@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Softphone</string>
+    <string name="settings">Instellingen</string>
+    <string name="dial">Kiezen</string>
+    <string name="contacts">Toestellen</string>
+    <string name="history">Historie</string>
+    <string name="call">Bellen</string>
+    <string name="add_contact">Toestel toevoegen</string>
+    <string name="edit_contact">Toestel bewerken</string>
+    <string name="name">Naam</string>
+    <string name="number">Nummer / toestel</string>
+    <string name="save">Opslaan</string>
+    <string name="cancel">Annuleren</string>
+    <string name="delete">Verwijderen</string>
+    <string name="open_settings">Openen</string>
+
+    <string name="status_not_configured">Geen account ingesteld</string>
+    <string name="status_ok">Verbonden als %1$s</string>
+    <string name="status_progress">Verbinden…</string>
+    <string name="status_failed">Registratie mislukt %1$s (tik voor logboek)</string>
+    <string name="status_offline">Niet verbonden (tik om opnieuw te proberen)</string>
+    <string name="not_registered">Let op: niet geregistreerd bij de centrale</string>
+    <string name="invalid_number">Ongeldig nummer</string>
+
+    <string name="ch_service">Verbinding met centrale</string>
+    <string name="ch_incoming">Inkomende gesprekken</string>
+    <string name="ch_missed">Gemiste gesprekken</string>
+    <string name="incoming_call">Inkomend gesprek</string>
+    <string name="missed_call">Gemist gesprek</string>
+    <string name="in_call">In gesprek</string>
+    <string name="fullscreen_permission">Geef de app toestemming voor schermvullende meldingen, anders verschijnt een inkomend gesprek niet op het vergrendelscherm.</string>
+
+    <string name="answer">Opnemen</string>
+    <string name="decline">Weigeren</string>
+    <string name="hangup">Ophangen</string>
+    <string name="mute">Dempen</string>
+    <string name="unmute">Dempen uit</string>
+    <string name="speaker">Luidspreker</string>
+    <string name="earpiece">Oortje</string>
+    <string name="keypad">Toetsen</string>
+    <string name="hold">Wacht</string>
+    <string name="resume">Hervat</string>
+    <string name="swap">Wissel</string>
+    <string name="transfer">Doorverbinden</string>
+    <string name="transfer_blind">Direct</string>
+    <string name="transfer_attended">Eerst overleggen</string>
+    <string name="merge">Verbind door</string>
+    <string name="calling">Bellen…</string>
+    <string name="ringing">Gaat over…</string>
+    <string name="on_hold">In de wacht</string>
+    <string name="held_by_remote">Door ander in de wacht gezet</string>
+    <string name="ended">Beëindigd</string>
+    <string name="call_failed">Gesprek mislukt</string>
+
+    <string name="s_server">Server</string>
+    <string name="s_server_help">IP-adres of hostnaam van Asterisk, bv. 192.168.1.10 of pbx.bedrijf.nl</string>
+    <string name="s_username">Gebruikersnaam / toestelnummer</string>
+    <string name="s_username_help">Zoals in Asterisk ingesteld, bv. 201</string>
+    <string name="s_password">Wachtwoord</string>
+    <string name="s_transport">Transport</string>
+    <string name="s_optional">Optioneel (meestal leeg laten)</string>
+    <string name="s_port">Poort (leeg = 5060, TLS 5061)</string>
+    <string name="s_display">Weergavenaam</string>
+    <string name="s_authid">Auth-ID (alleen als die afwijkt van gebruikersnaam)</string>
+    <string name="s_domain">SIP-domein (alleen als dat afwijkt van server)</string>
+    <string name="s_stun">STUN-server, bv. stun.l.google.com:19302</string>
+    <string name="required">Verplicht veld</string>
+
+    <string name="log">Logboek</string>
+    <string name="log_test">Verbinding testen</string>
+    <string name="log_share">Delen</string>
+    <string name="log_copy">Kopiëren</string>
+    <string name="log_clear">Wissen</string>
+    <string name="log_show_all">Alles tonen</string>
+    <string name="log_copied">Logboek gekopieerd</string>
+    <string name="log_empty">Nog geen meldingen. Druk op \"Verbinding testen\".</string>
+    <string name="s_srtp">Spraak versleutelen (SRTP, vereist TLS en media_encryption=sdes in Asterisk)</string>
+    <string name="s_battery">Batterijbesparing uitschakelen voor deze app</string>
+    <string name="s_help">Voor inkomende gesprekken met gesloten app blijft de melding \"Verbinding met centrale\" staan. TCP of TLS is aanbevolen: dat houdt de verbinding zuiniger open dan UDP.</string>
+    <string name="fill_required">Vul minimaal server en gebruikersnaam in</string>
+    <string name="battery_already">Batterijbesparing staat al uit voor deze app</string>
+
+    <string name="contacts_internal">Interne toestellen</string>
+    <string name="cancel_consult">Annuleer</string>
+    <string name="transfer_to_number">Toestel of nummer</string>
+    <string name="transfer_no_contacts">Nog geen toestellen. Voeg ze toe onder Toestellen, dan kun je ze hier met één tik kiezen.</string>
+    <string name="transfer_blind_short">Direct</string>
+    <string name="transfer_attended_short">Overleg</string>
+    <string name="transfer_sub">Gesprek met %1$s doorverbinden naar:</string>
+    <string name="transfer_done">Doorverbonden naar %1$s</string>
+    <string name="transfer_consulting">Overleg met %1$s, %2$s staat in de wacht</string>
+    <string name="held_label">In de wacht: %1$s</string>
+    <string name="state_active">Verbinding actief</string>
+    <string name="state_consult">Overleg</string>
+
+    <string name="s_appearance">Weergave</string>
+    <string name="s_account">Account</string>
+    <string name="theme_gys">Zakelijk (Got Your Six)</string>
+    <string name="theme_lcars">LCARS (Star Trek)</string>
+    <string name="theme_starwars">Star Wars-stijl</string>
+    <string name="contacts_internal_short">Toestellen</string>
+    <string name="contacts_phone">Telefoon</string>
+    <string name="contacts_search">Zoeken in telefooncontacten</string>
+    <string name="contacts_permission">Geef de app toegang tot je contacten om ze hier te zien. Bellers uit je telefoonboek worden dan ook met naam getoond.</string>
+    <string name="contacts_permission_button">Toegang geven</string>
+    <string name="contacts_phone_empty">Geen contacten gevonden.</string>
+    <string name="contacts_add_internal">Toevoegen aan toestellen</string>
+</resources>

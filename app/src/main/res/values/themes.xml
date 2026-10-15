@@ -1,0 +1,291 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ═══ Gedeelde opbouw: Material-kleuren en stijlen volgen de thema-variabelen (attrs.xml) ═══ -->
+    <style name="Base.App.Light" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">?attr/appAccent</item>
+        <item name="colorOnPrimary">?attr/appOnAccent</item>
+        <item name="colorPrimaryContainer">?attr/appAccentSoft</item>
+        <item name="colorOnPrimaryContainer">?attr/appAccentDark</item>
+        <item name="colorSecondary">?attr/appInkSoft</item>
+        <item name="colorOnSecondary">?attr/appBg</item>
+        <item name="colorSecondaryContainer">?attr/appAccentSoft</item>
+        <item name="colorOnSecondaryContainer">?attr/appAccentDark</item>
+        <item name="android:colorBackground">?attr/appBg</item>
+        <item name="colorSurface">?attr/appBg</item>
+        <item name="colorSurfaceContainerLowest">?attr/appBg</item>
+        <item name="colorSurfaceContainerLow">?attr/appBgAlt</item>
+        <item name="colorSurfaceContainer">?attr/appBgAlt</item>
+        <item name="colorSurfaceContainerHigh">?attr/appSurface</item>
+        <item name="colorSurfaceContainerHighest">?attr/appBgAlt</item>
+        <item name="colorOnSurface">?attr/appInk</item>
+        <item name="colorOnSurfaceVariant">?attr/appMuted</item>
+        <item name="colorOutline">?attr/appLine</item>
+        <item name="colorOutlineVariant">?attr/appLine</item>
+        <item name="android:windowBackground">?attr/appBg</item>
+        <item name="android:statusBarColor">?attr/appBg</item>
+        <item name="android:navigationBarColor">?attr/appBg</item>
+        <item name="android:windowLightStatusBar">?attr/appLightBars</item>
+        <item name="android:windowLightNavigationBar">?attr/appLightBars</item>
+        <!-- Android 15+ dwingt edge-to-edge af; wij laten het systeem de balken reserveren. -->
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
+        <item name="materialButtonStyle">@style/App.Button</item>
+        <item name="actionBarStyle">@style/App.ActionBar</item>
+        <item name="textAppearanceTitleLarge">@style/App.Text.TitleLarge</item>
+    </style>
+
+    <!-- Zelfde opbouw op een altijd-donkere basis (LCARS en Star Wars-stijl) -->
+    <style name="Base.App.Dark" parent="Theme.Material3.Dark">
+        <item name="colorPrimary">?attr/appAccent</item>
+        <item name="colorOnPrimary">?attr/appOnAccent</item>
+        <item name="colorPrimaryContainer">?attr/appAccentSoft</item>
+        <item name="colorOnPrimaryContainer">?attr/appAccentDark</item>
+        <item name="colorSecondary">?attr/appInkSoft</item>
+        <item name="colorOnSecondary">?attr/appBg</item>
+        <item name="colorSecondaryContainer">?attr/appAccentSoft</item>
+        <item name="colorOnSecondaryContainer">?attr/appAccentDark</item>
+        <item name="android:colorBackground">?attr/appBg</item>
+        <item name="colorSurface">?attr/appBg</item>
+        <item name="colorSurfaceContainerLowest">?attr/appBg</item>
+        <item name="colorSurfaceContainerLow">?attr/appBgAlt</item>
+        <item name="colorSurfaceContainer">?attr/appBgAlt</item>
+        <item name="colorSurfaceContainerHigh">?attr/appSurface</item>
+        <item name="colorSurfaceContainerHighest">?attr/appBgAlt</item>
+        <item name="colorOnSurface">?attr/appInk</item>
+        <item name="colorOnSurfaceVariant">?attr/appMuted</item>
+        <item name="colorOutline">?attr/appLine</item>
+        <item name="colorOutlineVariant">?attr/appLine</item>
+        <item name="android:windowBackground">?attr/appBg</item>
+        <item name="android:statusBarColor">?attr/appBg</item>
+        <item name="android:navigationBarColor">?attr/appBg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
+        <item name="materialButtonStyle">@style/App.Button</item>
+        <item name="actionBarStyle">@style/App.ActionBar</item>
+        <item name="textAppearanceTitleLarge">@style/App.Text.TitleLarge</item>
+        <item name="appLightBars">false</item>
+    </style>
+
+    <!-- ═══ Thema 1 · Zakelijk (huisstijl gotyoursix.nl, volgt licht/donker van de telefoon) ═══ -->
+    <style name="Theme.Softphone" parent="Base.App.Light">
+        <item name="appAccent">@color/accent</item>
+        <item name="appAccentDark">@color/accent_dark</item>
+        <item name="appAccentSoft">@color/accent_soft</item>
+        <item name="appOnAccent">@color/on_accent</item>
+        <item name="appBg">@color/bg</item>
+        <item name="appBgAlt">@color/bg_alt</item>
+        <item name="appSurface">@color/surface</item>
+        <item name="appLine">@color/line</item>
+        <item name="appInk">@color/ink</item>
+        <item name="appInkSoft">@color/ink_soft</item>
+        <item name="appMuted">@color/muted</item>
+        <item name="appOk">@color/ok</item>
+        <item name="appOkSoft">@color/ok_soft</item>
+        <item name="appDanger">@color/danger</item>
+        <item name="appDangerSoft">@color/danger_soft</item>
+        <item name="appNeutralSoft">@color/neutral_soft</item>
+        <item name="appCallBg">@color/call_bg</item>
+        <item name="appCallSurface">@color/call_surface</item>
+        <item name="appCallButton">@color/call_button</item>
+        <item name="appCallText">@color/call_text</item>
+        <item name="appCallTextDim">@color/call_text_dim</item>
+        <item name="appFontMedium">@font/poppins_medium</item>
+        <item name="appFontSemibold">@font/poppins_semibold</item>
+        <item name="appFontBold">@font/poppins_bold</item>
+        <item name="appButtonCorner">999dp</item>
+        <item name="appKeyCorner">14dp</item>
+        <item name="appButtonCaps">false</item>
+        <item name="appLightBars">@bool/light_bars</item>
+    </style>
+    <style name="Theme.Softphone.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Softphone.Call" parent="Theme.Softphone.NoActionBar">
+        <item name="android:windowBackground">?attr/appCallBg</item>
+        <item name="android:statusBarColor">?attr/appCallBg</item>
+        <item name="android:navigationBarColor">?attr/appCallBg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+    <!-- ═══ Thema 2 · LCARS (Star Trek-computerschermen) ═══ -->
+    <style name="Theme.Lcars" parent="Base.App.Dark">
+        <item name="appAccent">#FF9C00</item>
+        <item name="appAccentDark">#FFCC99</item>
+        <item name="appAccentSoft">#3D2A0F</item>
+        <item name="appOnAccent">#000000</item>
+        <item name="appBg">#000000</item>
+        <item name="appBgAlt">#15151C</item>
+        <item name="appSurface">#0D0D12</item>
+        <item name="appLine">#34343F</item>
+        <item name="appInk">#F5EBDD</item>
+        <item name="appInkSoft">#CC99CC</item>
+        <item name="appMuted">#9C948A</item>
+        <item name="appOk">#66CC99</item>
+        <item name="appOkSoft">#10261C</item>
+        <item name="appDanger">#E05555</item>
+        <item name="appDangerSoft">#2E1212</item>
+        <item name="appNeutralSoft">#1C1C26</item>
+        <item name="appCallBg">#000000</item>
+        <item name="appCallSurface">#1A1A22</item>
+        <item name="appCallButton">#2B2336</item>
+        <item name="appCallText">#FFCC99</item>
+        <item name="appCallTextDim">#CC99CC</item>
+        <item name="appFontMedium">@font/lcars_medium</item>
+        <item name="appFontSemibold">@font/lcars_semibold</item>
+        <item name="appFontBold">@font/lcars_bold</item>
+        <item name="appButtonCorner">999dp</item>
+        <item name="appKeyCorner">22dp</item>
+        <item name="appButtonCaps">true</item>
+    </style>
+    <style name="Theme.Lcars.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Lcars.Call" parent="Theme.Lcars.NoActionBar">
+        <item name="android:windowBackground">?attr/appCallBg</item>
+        <item name="android:statusBarColor">?attr/appCallBg</item>
+        <item name="android:navigationBarColor">?attr/appCallBg</item>
+    </style>
+
+    <!-- ═══ Thema 3 · Star Wars-stijl (ruimte, openingstekst-geel, lichtzwaarden) ═══ -->
+    <style name="Theme.StarWars" parent="Base.App.Dark">
+        <item name="appAccent">#FFE81F</item>
+        <item name="appAccentDark">#FFE81F</item>
+        <item name="appAccentSoft">#2A2608</item>
+        <item name="appOnAccent">#000000</item>
+        <item name="appBg">#04060A</item>
+        <item name="appBgAlt">#0D121A</item>
+        <item name="appSurface">#0A0E14</item>
+        <item name="appLine">#1E2A38</item>
+        <item name="appInk">#E8EEF5</item>
+        <item name="appInkSoft">#9FB3C8</item>
+        <item name="appMuted">#6E7F91</item>
+        <item name="appOk">#2FE07A</item>
+        <item name="appOkSoft">#0C2A18</item>
+        <item name="appDanger">#FF3B3B</item>
+        <item name="appDangerSoft">#2E0D0D</item>
+        <item name="appNeutralSoft">#121A24</item>
+        <item name="appCallBg">#000000</item>
+        <item name="appCallSurface">#0F1620</item>
+        <item name="appCallButton">#18222E</item>
+        <item name="appCallText">#E8EEF5</item>
+        <item name="appCallTextDim">#4FA8FF</item>
+        <item name="appFontMedium">@font/sw_body</item>
+        <item name="appFontSemibold">@font/sw_heading</item>
+        <item name="appFontBold">@font/sw_bold</item>
+        <item name="appButtonCorner">4dp</item>
+        <item name="appKeyCorner">4dp</item>
+        <item name="appButtonCaps">true</item>
+    </style>
+    <style name="Theme.StarWars.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.StarWars.Call" parent="Theme.StarWars.NoActionBar">
+        <item name="android:windowBackground">?attr/appCallBg</item>
+        <item name="android:statusBarColor">?attr/appCallBg</item>
+        <item name="android:navigationBarColor">?attr/appCallBg</item>
+    </style>
+
+    <!-- ═══ Componentstijlen (gebruiken alleen thema-variabelen) ═══ -->
+    <style name="App.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">?attr/appButtonCorner</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:fontFamily">?attr/appFontSemibold</item>
+        <item name="android:textAllCaps">?attr/appButtonCaps</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">?attr/appOnAccent</item>
+        <item name="backgroundTint">?attr/appAccent</item>
+        <item name="android:paddingStart">22dp</item>
+        <item name="android:paddingEnd">22dp</item>
+    </style>
+
+    <style name="App.Button.Secondary">
+        <item name="android:textColor">?attr/appInk</item>
+        <item name="backgroundTint">?attr/appBgAlt</item>
+        <item name="strokeColor">?attr/appLine</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="iconTint">?attr/appInk</item>
+    </style>
+
+    <style name="App.Button.Small">
+        <item name="android:minHeight">38dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="App.Button.Small.Secondary">
+        <item name="android:textColor">?attr/appInk</item>
+        <item name="backgroundTint">?attr/appBgAlt</item>
+        <item name="strokeColor">?attr/appLine</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Ronde knop op het belscherm -->
+    <style name="App.CallButton" parent="Widget.Material3.Button.IconButton.Filled">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="cornerRadius">?attr/appButtonCorner</item>
+        <item name="iconSize">26dp</item>
+        <item name="iconTint">?attr/appCallText</item>
+        <item name="backgroundTint">?attr/appCallButton</item>
+    </style>
+
+    <style name="App.CallCell" parent="">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="App.CallLabel" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:fontFamily">?attr/appFontMedium</item>
+        <item name="android:textColor">?attr/appCallTextDim</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="App.NavLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">?attr/appFontMedium</item>
+        <item name="fontFamily">?attr/appFontMedium</item>
+    </style>
+
+    <style name="App.ActionBar" parent="Widget.Material3.ActionBar.Solid">
+        <item name="background">?attr/appBg</item>
+        <item name="elevation">0dp</item>
+        <item name="titleTextStyle">@style/App.Text.TitleLarge</item>
+    </style>
+
+    <style name="App.Text.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">?attr/appFontSemibold</item>
+        <item name="fontFamily">?attr/appFontSemibold</item>
+        <item name="android:textColor">?attr/appInk</item>
+    </style>
+
+    <style name="App.Heading" parent="">
+        <item name="android:fontFamily">?attr/appFontSemibold</item>
+        <item name="android:textColor">?attr/appInk</item>
+    </style>
+
+    <!-- Klein kopje in hoofdletters in de accentkleur -->
+    <style name="App.Eyebrow" parent="">
+        <item name="android:fontFamily">?attr/appFontSemibold</item>
+        <item name="android:textColor">?attr/appAccent</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+</resources>

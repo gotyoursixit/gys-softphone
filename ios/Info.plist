@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Aangevuld met de gegenereerde Info.plist (GENERATE_INFOPLIST_FILE). Alleen wat niet als build-instelling kan. -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<!-- Gesprek loopt door met het scherm op slot of de app op de achtergrond. -->
+		<string>audio</string>
+	</array>
+</dict>
+</plist>

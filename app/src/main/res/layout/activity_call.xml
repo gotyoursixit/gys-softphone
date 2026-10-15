@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/appCallBg"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/callState"
+        style="@style/App.Eyebrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/callAvatar"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bg_avatar"
+        android:backgroundTint="?attr/appCallSurface"
+        android:fontFamily="?attr/appFontSemibold"
+        android:gravity="center"
+        android:textColor="?attr/appCallText"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/callName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:ellipsize="end"
+        android:fontFamily="?attr/appFontSemibold"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="?attr/appCallText"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/callSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="?attr/appCallTextDim"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/callTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="?attr/appFontMedium"
+        android:textColor="?attr/appCallText"
+        android:textSize="18sp" />
+
+    <!-- Overleg: wie staat er in de wacht -->
+    <TextView
+        android:id="@+id/heldText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_pill"
+        android:backgroundTint="?attr/appCallSurface"
+        android:drawablePadding="8dp"
+        android:fontFamily="?attr/appFontMedium"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:textColor="?attr/appCallTextDim"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_pause"
+        app:drawableTint="?attr/appAccent" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <GridLayout
+        android:id="@+id/keypad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone" />
+
+    <!-- Inkomend -->
+    <LinearLayout
+        android:id="@+id/incomingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDecline"
+                style="@style/App.CallButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:contentDescription="@string/decline"
+                app:backgroundTint="?attr/appDanger"
+                app:icon="@drawable/ic_call_end" />
+
+            <TextView
+                style="@style/App.CallLabel"
+                android:text="@string/decline" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAnswer"
+                style="@style/App.CallButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:contentDescription="@string/answer"
+                app:backgroundTint="?attr/appOk"
+                app:icon="@drawable/ic_stat_phone" />
+
+            <TextView
+                style="@style/App.CallLabel"
+                android:text="@string/answer" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Actief gesprek -->
+    <LinearLayout
+        android:id="@+id/activePanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout style="@style/App.CallCell">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMute"
+                    style="@style/App.CallButton"
+                    android:contentDescription="@string/mute"
+                    app:icon="@drawable/ic_mic_off" />
+                <TextView
+                    android:id="@+id/lblMute"
+                    style="@style/App.CallLabel"
+                    android:text="@string/mute" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/App.CallCell">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSpeaker"
+                    style="@style/App.CallButton"
+                    android:contentDescription="@string/speaker"
+                    app:icon="@drawable/ic_volume_up" />
+                <TextView
+                    style="@style/App.CallLabel"
+                    android:text="@string/speaker" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/App.CallCell">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnKeypad"
+                    style="@style/App.CallButton"
+                    android:contentDescription="@string/keypad"
+                    app:icon="@drawable/ic_dialpad" />
+                <TextView
+                    style="@style/App.CallLabel"
+                    android:text="@string/keypad" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <LinearLayout style="@style/App.CallCell">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnHold"
+                    style="@style/App.CallButton"
+                    android:contentDescription="@string/hold"
+                    app:icon="@drawable/ic_pause" />
+                <TextView
+                    android:id="@+id/lblHold"
+                    style="@style/App.CallLabel"
+                    android:text="@string/hold" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/App.CallCell">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTransfer"
+                    style="@style/App.CallButton"
+                    android:contentDescription="@string/transfer"
+                    app:icon="@drawable/ic_transfer" />
+                <TextView
+                    style="@style/App.CallLabel"
+                    android:text="@string/transfer" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cellSwap"
+                style="@style/App.CallCell"
+                android:visibility="invisible">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSwap"
+                    style="@style/App.CallButton"
+                    android:contentDescription="@string/swap"
+                    app:icon="@drawable/ic_swap" />
+                <TextView
+                    style="@style/App.CallLabel"
+                    android:text="@string/swap" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Overleg bij doorverbinden -->
+        <LinearLayout
+            android:id="@+id/consultPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelConsult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:text="@string/cancel_consult"
+                android:textColor="?attr/appCallText"
+                app:backgroundTint="?attr/appCallButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMerge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="2"
+                android:text="@string/merge"
+                app:icon="@drawable/ic_merge"
+                app:iconGravity="textStart"
+                app:iconTint="?attr/appOnAccent" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHangup"
+            style="@style/App.CallButton"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/hangup"
+            app:backgroundTint="?attr/appDanger"
+            app:icon="@drawable/ic_call_end" />
+    </LinearLayout>
+</LinearLayout>
